@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Manavraghuvanshi
+- 👋 Hi, I’m @Manav Choudhary
 - 👀 I’m interested in HTML,CSS, JavaScript and ServiceNow Developer.
 - 🌱 I’m currently learning JavaScript for ServiceNow
 - 💞️ I’m looking to collaborate on any Project for Frontend Web Development
