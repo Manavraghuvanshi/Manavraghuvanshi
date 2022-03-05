@@ -1,0 +1,28 @@
+//ref qual - 
+//javascript:u_backfillAssignmentGroup();
+
+//script include
+function u_backfillAssignmentGroup() {
+   var gp = ' ';
+   var a = current.caller_id; //check your field name 
+   
+   //return everything if the assigned_to value is empty
+   if(!a)
+      return;
+   
+   //sys_user_grmember has the user to group relationship
+   var grp = new GlideRecord('sys_user_grmember');
+   grp.addQuery('user',a);
+   grp.query();
+   while(grp.next()) {
+      if (gp.length > 0) {
+         //build a comma separated string of groups if there is more than one
+         gp += (',' + grp.group);
+      }
+      else {
+         gp = grp.group;
+      }
+   }
+   // return Groups where assigned to is in those groups we use IN for lists
+   return 'sys_idIN' + gp;
+}
